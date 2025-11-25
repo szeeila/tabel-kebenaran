@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Kebenaran</title>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Tabel Kebenaran</h1>
+
+      <div
+        style="
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-bottom: 15px;
+        "
+      >
+        <input
+          type="text"
+          id="expressionInput"
+          placeholder="Masukkan rumus logika... (contoh: ¬A ∧ (B ∨ C) )"
+          style="
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 2px solid #ff99f2;
+            background: #fae3f4;
+            color: rgb(0, 0, 0);
+            border-radius: 6px;
+            font-size: 16px;
+            display: block;
+            font-family: 'Baloo 2', cursive;
+          "
+        />
+
+        <button
+          id="backspaceBtn"
+          style="
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 2px solid #ff99f2;
+            background: #ffd2f0;
+            cursor: pointer;
+            font-family: 'Baloo 2', cursive;
+            font-size: 16px;
+            height: 53px;
+            margin-bottom: 15px;
+          "
+        >
+          ⌫
+        </button>
+      </div>
+
+      <div class="button-row">
+        <button class="symbol-btn">A</button>
+        <button class="symbol-btn">B</button>
+        <button class="symbol-btn">C</button>
+        <button class="symbol-btn">D</button>
+        <button class="symbol-btn">P</button>
+        <button class="symbol-btn">Q</button>
+        <button class="symbol-btn">R</button>
+        <button class="symbol-btn">S</button>
+        <button class="symbol-btn" data-tip="Negasi (NOT)">¬</button>
+        <button class="symbol-btn" data-tip="Konjungsi (AND)">∧</button>
+        <button class="symbol-btn" data-tip="Disjungsi (OR)">∨</button>
+        <button class="symbol-btn" data-tip="Implikasi (IF-THEN)">→</button>
+        <button class="symbol-btn" data-tip="Biimplikasi (IF AND ONLY IF)">↔</button>
+        <button class="symbol-btn" data-tip="NAND (Not AND)">|</button>
+        <button class="symbol-btn" data-tip="NOR (Not OR)">↓</button>
+        <button class="symbol-btn" data-tip="XOR (Exclusive OR)">⊕</button>
+
+        <button class="symbol-btn">(</button>
+        <button class="symbol-btn">)</button>
+      </div>
+
+      <div class="generate-row">
+        <button id="generateBtn">Generate</button>
+        <button id="generateCNFBtn">CNF</button>
+        <button id="generateDNFBtn">DNF</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+
+      <h2>Hasil</h2>
+      <table id="truthTable"></table>
+
+      <h2>CNF</h2>
+      <table id="cnfTable"></table>
+
+      <h2>DNF</h2>
+      <table id="dnfTable"></table>
+    </div>
+
+    <!-- JS External -->
+    <script src="script.js"></script>
+  </body>
+</html>

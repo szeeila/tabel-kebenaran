@@ -1,0 +1,188 @@
+body {
+  background: #ffebf2;
+  color: #5d4c5b;
+  font-family: "Baloo 2", cursive;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  background: #ffe6fa;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 50px;
+  border: 3px solid #ffc7e3;
+  box-shadow: 0 0 20px rgba(255, 150, 211, 0.3);
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #ff77c7;
+  text-shadow: 0 0 3px white;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffc5e0;
+  background: #fff2fa;
+  color: #5d4c5b;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-family: "Baloo 2", cursive;
+}
+
+input::placeholder {
+  color: #b594b0;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.symbol-btn {
+  flex: 1 1 20%;
+  padding: 10px 0;
+  font-size: 16px;
+  background: #ffd2f0;
+  color: #744f6e;
+  border: 2px solid #ffbce8;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Baloo 2", cursive;
+}
+
+.symbol-btn:hover {
+  background: #ffbae8;
+  transform: translateY(-2px);
+}
+
+.generate-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.generate-row button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #ffc8ff;
+  color: #5d4260;
+  border: 2px solid #ff99f2;
+  transition: 0.2s;
+  font-family: "Baloo 2", cursive;
+}
+
+.generate-row button:hover {
+  background: #ffaff5;
+  transform: translateY(-2px);
+}
+
+#resetBtn {
+  background: #ffd6de;
+  border-color: #ff9aa8;
+}
+
+#resetBtn:hover {
+  background: #ffbec9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 30px;
+  font-family: "Baloo 2", cursive;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 2px solid #ffbde9;
+}
+
+th {
+  background: #ffdaf3;
+  color: #633d60;
+}
+
+.b {
+  color: #36b66d;
+  font-weight: 700;
+}
+
+.s {
+  color: #ff5b5b;
+  font-weight: 700;
+}
+
+table tr:nth-child(odd) {
+  background-color: #fff0f8;
+}
+
+table tr:nth-child(even) {
+  background-color: #ffe6f5;
+}
+
+table tr:hover {
+  background-color: #ffd2f0;
+}
+
+input:focus,
+button:focus,
+.symbol-btn:focus {
+  outline: none;
+  border-color: #ff77c7 !important;
+  box-shadow: 0 0 6px #ffaadf;
+}
+
+.symbol-btn {
+  position: relative;
+}
+
+.symbol-btn[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffcdf5;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  border: 1px solid #ff9ae2;
+  z-index: 10;
+  font-family: "Baloo 2", cursive;
+}
+
+.symbol-btn[data-tip]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 103%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #ffcdf5 transparent transparent transparent;
+  z-index: 10;
+  font-family: "Baloo 2", cursive;
+}
